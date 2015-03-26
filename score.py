@@ -16,7 +16,7 @@ def score():
     newscore = dataFromUrl.text
     json_data = json.loads(newscore)
     cur_score = json_data[0]['de']
-    commands.getoutput('osascript sendsms.applescript '++'"'+cur_score+'"')
+    commands.getoutput('osascript sendsms.applescript '+buddyId+' "'+cur_score+'"')
     time.sleep(60*5)
 
 while True :
